@@ -24,7 +24,8 @@
 		font-size: clamp(0.4rem, 2.5vw, 1rem);
 	}
 	h1 {
-		font-size: clamp(0.875rem, 5vw, 2rem);
+		font-size: clamp(0.75rem, 3vw, 1.4rem);
+		line-height: 1.75;
 	}
 	button {
 		background-color: rgb(136, 213, 28);

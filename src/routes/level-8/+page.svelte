@@ -4,8 +4,10 @@
 	import { loseCookieAndGoTo, infoTitle, infoText } from '$lib/scripts/game';
 
 	function setPatternInfo() {
-		infoTitle.set('TODO: Level 8 Info Title');
-		infoText.set('TODO: Level 8 Info Text');
+		infoTitle.set('Unklare Formulierungen');
+		infoText.set(
+			'HA, erwischt! Die Formulierung war absichtlich verwirrend formuliert. So wusstest du nicht genau, was passiert und hast zugestimmt.'
+		);
 	}
 </script>
 

@@ -4,6 +4,7 @@ import { get } from 'svelte/store';
 import { goto } from '$app/navigation';
 
 export const cookies = writable<number>(3);
+export const hydrated = writable(false);
 export const startTime = writable<number | null>(null);
 export const recordTime = writable<number>(0);
 export const showInfoSlide = writable<boolean>(false);

@@ -5,8 +5,10 @@
 	import { onMount } from 'svelte';
 
 	function setPatternInfo() {
-		infoTitle.set('TODO: Level 3 Info Title');
-		infoText.set('TODO: Level 3 Info Text');
+		infoTitle.set('Bequeme Voreinstellungen');
+		infoText.set(
+			'Schon angehakt bedeutet nicht immer gut für dich. Ich habe die voreingestellten Optionen praktischerweise so gesetzt, dass du unbewusst zustimmst.'
+		);
 	}
 
 	onMount(() => {
@@ -49,7 +51,7 @@
 	<p class="py-2">Bitte wähle alle Browser-Tracker ab, die du nicht teilen möchtest.</p>
 
 	{#each labels as label, i}
-		<div class="option_sliders text-left">
+		<div class="option_sliders mb-1 text-left md:mb-0">
 			<label class="switch">
 				<input type="checkbox" bind:checked={sliders[i]} />
 				<span class="slider"></span>

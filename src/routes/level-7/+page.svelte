@@ -10,8 +10,10 @@
 	let specialIndex: number;
 
 	function setPatternInfo() {
-		infoTitle.set('TODO: Level 7 Info Title');
-		infoText.set('TODO: Level 7 Info Text');
+		infoTitle.set('Knifflige Opt-Outs');
+		infoText.set(
+			'Ich habe dir das Ablehnen extra schwer gemacht. Wenn du wirklich ablehnen möchtest, musst du ganz genau hinschauen!'
+		);
 	}
 
 	function handleClick(i: number) {
@@ -42,7 +44,7 @@
 		{#each Array(number_of_boxes) as _, i}
 			<button
 				class="box h-5 w-4 border-4 border-white hover:border-yellow-300"
-				style="background-color: {i === specialIndex ? '#0b97cb' : '#FFabec'}"
+				style="background-color: {i === specialIndex ? '#0782b6' : '#0b97cb'}"
 				on:click={() => handleClick(i)}
 				aria-label={i === specialIndex ? 'richtige Box' : 'falsche Box'}
 			></button>

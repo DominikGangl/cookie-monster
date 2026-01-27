@@ -4,8 +4,10 @@
 	import { goto } from '$app/navigation';
 
 	function setPatternInfo() {
-		infoTitle.set('TODO: Level 5 Info Title');
-		infoText.set('TODO: Level 5 Info Text');
+		infoTitle.set('Confirm-Shaming');
+		infoText.set(
+			'Ich habe dein Nein absichtlich fies klingen lassen, damit du dich schlecht fühlst und doch zustimmst.'
+		);
 	}
 </script>
 

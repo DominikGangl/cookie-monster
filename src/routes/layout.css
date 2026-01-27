@@ -12,15 +12,19 @@ html {
     font-family: 'Press Start 2P';
     font-size: 2rem;
 }
+
 p {
     margin: 0.875rem 0 0.5rem 0;
 }
 a {
     text-decoration: underline;
     color: blue;
-    font-size: medium;
     cursor: pointer;
     font-size: 0.5rem;
+}
+.mehr-anzeigen-button {
+    color:#fff200;
+    font-size: 0.8em;
 }
 h1 {
     color: white;
@@ -240,10 +244,17 @@ input:checked+.slider:before {
     }
     button {
         font-size: 0.5rem;
+        border-width: medium;
+    }
+    button:hover {
+        border-width: medium;
     }
     h1 {
         font-size: 1.5rem;
         line-height: 1.875rem;
+    }
+    html {
+        font-size: 1.5rem;
     }
 }
 
@@ -268,3 +279,4 @@ input:checked+.slider:before {
     }
 
 }
+

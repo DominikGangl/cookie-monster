@@ -4,14 +4,15 @@
 	import { loadCookies, infoTitle, infoText, loseCookieAndGoTo } from '$lib/scripts/game';
 	import Header from '$lib/components/Header.svelte';
 
-	function setPatternInfo() {
-		infoTitle.set('TODO: Level 4 Info Title');
-		infoText.set('TODO: Level 4 Info Text');
-	}
+	// function setPatternInfo() {
+	// 	infoTitle.set('TODO: Level 4 Info Title');
+	// 	infoText.set('TODO: Level 4 Info Text');
+	// }
 
 	function stepBack() {
-		setPatternInfo();
-		loseCookieAndGoTo('/level-3');
+		// setPatternInfo();
+		// loseCookieAndGoTo('/level-3');
+		goto('/level-3');
 	}
 
 	function continueForward() {

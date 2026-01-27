@@ -6,9 +6,9 @@
 	let showDetails = false;
 
 	function setPatternInfo() {
-		infoTitle.set('Cookies');
+		infoTitle.set('Überwältigende Infos');
 		infoText.set(
-			'Um dir das bestmögliche Spielerlebnis zu gewährleisten, wird eine Einwilligung, deine Daten zu speichern und zu verarbeiten, nicht benötigt. Damit ich deine Daten dennoch nutzen kann, benötige ich hierfür deine Zustimmung.'
+			'Viel Text, wenig Inhalt. Durch endloses Scrollen solltest du müde werden und einfach zustimmen.'
 		);
 	}
 </script>
@@ -30,7 +30,9 @@
 			<!-- svelte-ignore a11y_interactive_supports_focus -->
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_missing_attribute -->
-			<a role="button" on:click={() => (showDetails = true)}> Mehr anzeigen </a>
+			<a class="mehr-anzeigen-button" role="button" on:click={() => (showDetails = true)}>
+				Mehr anzeigen
+			</a>
 		{/if}
 	</div>
 

@@ -48,9 +48,10 @@
 <Header />
 
 <div class="popup center_popup">
-	<h3 style="line-height: 1.3em;">Beeil dich!</h3>
+	<h3 style="line-height: 1.3em;">Beeil dich!!!</h3>
 	<p>
-		Du hast nur noch wenig Zeit um die Cookies zu akzeptieren, sonst hast du deine Chance verpasst!
+		Du hast nur noch wenig Zeit um die Cookies zu akzeptieren, sonst hast du deine letzte Chance
+		verpasst!
 	</p>
 
 	<p style="margin-top: 1.5rem;">

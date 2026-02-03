@@ -34,8 +34,10 @@
 
 	function acceptClicked() {
 		if (buttonText === 'Annehmen') {
-			infoTitle.set('TODO: Level Info Title');
-			infoText.set('TODO: Level Info Text');
+			infoTitle.set('Fake Urgency');
+			infoText.set(
+				'Tick tack! Ich habe ein falsches Gefühl von Dringlichkeit erzeugt, damit du schneller zustimmst.'
+			);
 			loseCookieAndGoTo('/level-10');
 		} else {
 			startCountdown(5);

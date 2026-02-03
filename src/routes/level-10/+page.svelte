@@ -1,51 +1,44 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 	import Header from '$lib/components/Header.svelte';
 	import { goto } from '$app/navigation';
+	import { loseCookieAndGoTo, infoTitle, infoText, showInfoSlide } from '$lib/scripts/game';
 
-	let escaping_button_element: HTMLButtonElement | null = null;
+	let timeLeft = 5;
+	let buttonText = 'Annehmen';
+	let blink = true;
+	let missedChance = false;
+	let interval: ReturnType<typeof setInterval>;
 
-	let timeout = 170;
-	let isTouchDevice = false;
-
-	onMount(() => {
-		if (browser) {
-			isTouchDevice =
-				'ontouchstart' in window ||
-				navigator.maxTouchPoints > 0 ||
-				(window as any).DocumentTouch instanceof Function;
-		}
-	});
-
-	function escaping_button(button: HTMLButtonElement | null) {
-		if (!button) return;
-
-		setTimeout(() => {
-			button.style.position = 'fixed';
-			const x = Math.floor(Math.random() * 75);
-			const y = Math.floor(Math.random() * 75);
-			button.style.top = `${x}%`;
-			button.style.left = `${y}%`;
-		}, timeout);
-
-		timeout += 20;
+	$: if (!$showInfoSlide) {
+		startCountdown(5);
 	}
 
-	// For touch devices
-	let touchTaps = 0;
+	function startCountdown(seconds: number) {
+		clearInterval(interval);
+		missedChance = false;
+		timeLeft = seconds;
+		buttonText = 'Annehmen';
 
-	function handleClick(e: MouseEvent) {
-		if (isTouchDevice) {
-			e.preventDefault();
-			if (touchTaps < 2) {
-				touchTaps += 1;
-				escaping_button(escaping_button_element);
-			} else {
-				goto('/win-screen');
+		interval = setInterval(() => {
+			timeLeft--;
+
+			if (timeLeft <= 0) {
+				clearInterval(interval);
+				missedChance = true;
+				buttonText = 'Ich brauche mehr Zeit';
 			}
+		}, 1000);
+	}
+
+	startCountdown(5);
+
+	function acceptClicked() {
+		if (buttonText === 'Annehmen') {
+			infoTitle.set('TODO: Level Info Title');
+			infoText.set('TODO: Level Info Text');
+			loseCookieAndGoTo('/level-10');
 		} else {
-			goto('/win-screen');
+			startCountdown(5);
 		}
 	}
 </script>
@@ -53,16 +46,58 @@
 <Header />
 
 <div class="popup center_popup">
-	<h3>Okay, ich gebe auf...</h3>
-	<p>Klicke einfach auf den Button und deine Daten bleiben bei dir!</p>
-	<!-- svelte-ignore a11y_mouse_events_have_key_events -->
-	<div class="h-9 md:h-12">
-		<button
-			bind:this={escaping_button_element}
-			on:mouseover={!isTouchDevice ? () => escaping_button(escaping_button_element) : null}
-			on:click={handleClick}
-		>
-			Abschließen
-		</button>
-	</div>
+	<h3 style="line-height: 1.3em;">Beeil dich!</h3>
+	<p>
+		Du hast nur noch wenig Zeit um die Cookies zu akzeptieren, sonst hast du deine Chance verpasst!
+	</p>
+
+	<p style="margin-top: 1.5rem;">
+		{#if missedChance}
+			Die Zeit ist abgelaufen!
+		{:else}
+			Nur noch {timeLeft} Sekunden
+		{/if}
+	</p>
+
+	<button
+		class:blink={blink && buttonText === 'Annehmen'}
+		on:click={acceptClicked}
+		style="margin-top: 0.75rem;"
+	>
+		{buttonText}
+	</button>
+
+	<button
+		style="margin-top: 0.75rem;"
+		on:click={() => {
+			goto('/level-11');
+		}}
+	>
+		Ablehnen
+	</button>
 </div>
+
+<style>
+	.blink {
+		background-color: red;
+		color: white;
+		animation: blink-animation 0.75s steps(2, start) infinite alternate;
+	}
+
+	@keyframes blink-animation {
+		0%,
+		49.999% {
+			background-color: yellow;
+			color: black;
+		}
+		50%,
+		100% {
+			background-color: red;
+			color: white;
+		}
+	}
+	button:hover {
+		background-color: black !important;
+		color: white !important;
+	}
+</style>

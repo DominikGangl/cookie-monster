@@ -1,5 +1,5 @@
 # Readme
-This is an educational game on dark patterns in cookie banners by David Leimstädtner.
+This is an educational game on dark patterns in cookie banners by David Leimstädtner and Dominik Gangl.
 
 ## Installing and running the project
 To install the app, you need Node version 18.13+ (Node 20 LTS recommended). 

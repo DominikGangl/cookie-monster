@@ -1,282 +1,277 @@
 @import 'tailwindcss';
 
 @font-face {
-    font-family: 'Press Start 2P';
-    src: url('../fonts/PressStart2P-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Press Start 2P';
+	src: url('/fonts/PressStart2P-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 html {
-    background-color: black;
-    color: yellow;
-    font-family: 'Press Start 2P';
-    font-size: 2rem;
+	background-color: black;
+	color: yellow;
+	font-family: 'Press Start 2P';
+	font-size: 2rem;
 }
 
 p {
-    margin: 0.875rem 0 0.5rem 0;
+	margin: 0.875rem 0 0.5rem 0;
 }
 a {
-    text-decoration: underline;
-    color: blue;
-    cursor: pointer;
-    font-size: 0.5rem;
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+	font-size: 0.5rem;
 }
 .mehr-anzeigen-button {
-    color:#fff200;
-    font-size: 0.8em;
+	color: #fff200;
+	font-size: 0.8em;
 }
 h1 {
-    color: white;
-    font-weight: bold;
-    font-size: 3rem;
-    text-decoration: underline;
-    line-height: 3.25rem;
+	color: white;
+	font-weight: bold;
+	font-size: 3rem;
+	text-decoration: underline;
+	line-height: 3.25rem;
 }
 h3 {
-    color: white;
-    font-weight: bold;
-    font-size: 1.3rem;
-    text-decoration: underline;
-    line-height: 1.75rem;
-
+	color: white;
+	font-weight: bold;
+	font-size: 1.3rem;
+	text-decoration: underline;
+	line-height: 1.75rem;
 }
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 47%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 47%;
 }
 
 .popup {
-    border-block-color: yellow;
-    background-color: black;
-    border: solid;
-    border-width: thick;
-    padding: 2rem 0.5rem 1rem 0.5rem;
-    width: 67%;
-    line-height: 1.25rem;
-    text-align: center;
-    margin: 0rem auto 2rem auto;
-    box-shadow: 15px 13px #443b12;
+	border-block-color: yellow;
+	background-color: black;
+	border: solid;
+	border-width: thick;
+	padding: 2rem 0.5rem 1rem 0.5rem;
+	width: 67%;
+	line-height: 1.25rem;
+	text-align: center;
+	margin: 0rem auto 2rem auto;
+	box-shadow: 15px 13px #443b12;
 }
 .first-page-popup {
-    padding: 1rem 0.5rem 1.5rem 0.5rem;
-    margin-bottom: 0;
+	padding: 1rem 0.5rem 1.5rem 0.5rem;
+	margin-bottom: 0;
 }
 
 .center_popup {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    margin-top: 7%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 7%;
 }
 
 button {
-    font-size: 0.8rem;
-    font-family: 'Press Start 2P';
-    padding: 0.35rem 0.8rem;
-    background-color: yellow;
-    color: black;
-    border-color: aliceblue;
-    border-width: thick;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    border-style: outset;
+	font-size: 0.8rem;
+	font-family: 'Press Start 2P';
+	padding: 0.35rem 0.8rem;
+	background-color: yellow;
+	color: black;
+	border-color: aliceblue;
+	border-width: thick;
+	margin-top: 0.5rem;
+	cursor: pointer;
+	border-style: outset;
 }
 .grid button {
-    margin: 0.2rem;
+	margin: 0.2rem;
 }
 
 button:hover {
-    background-color: black;
-    color: yellow;
-    border-color: yellow;
-    border-width: thick;
+	background-color: black;
+	color: yellow;
+	border-color: yellow;
+	border-width: thick;
 }
 
 #animation {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #1d1c1c;
-    margin: 0;
-    top: 0;
-    left: 0;
-    background-image: url(../images/cookie_monster.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    animation-name: animation_background;
-    animation-duration: 2s;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #1d1c1c;
+	margin: 0;
+	top: 0;
+	left: 0;
+	background-image: url(../images/cookie_monster.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	animation-name: animation_background;
+	animation-duration: 2s;
 }
 
 @keyframes animation_background {
-    from {
-        background-color: #000000
-    }
+	from {
+		background-color: #000000;
+	}
 
-    to {
-        background-color: #fff200
-    }
+	to {
+		background-color: #fff200;
+	}
 }
 
 #animation_cookie {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: 55%;
-    position: fixed;
-    width: 1%;
-    animation-name: cookie_animation;
-    animation-duration: 2s;
-    filter: brightness(0%);
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 55%;
+	position: fixed;
+	width: 1%;
+	animation-name: cookie_animation;
+	animation-duration: 2s;
+	filter: brightness(0%);
 }
 
 @keyframes cookie_animation {
-    from {
-        width: 100%;
-        filter: brightness(100%);
-        top: 5%
-    }
+	from {
+		width: 100%;
+		filter: brightness(100%);
+		top: 5%;
+	}
 
-    to {
-        width: 10%;
-        filter: brightness(0%);
-        top: 55%
-    }
+	to {
+		width: 10%;
+		filter: brightness(0%);
+		top: 55%;
+	}
 }
 
 .option_sliders {
-    padding: 0.2em;
-    padding-left: 1.5em;
+	padding: 0.2em;
+	padding-left: 1.5em;
 }
 
 /* The switch - the box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+	opacity: 0;
+	width: 0;
+	height: 0;
 }
 
 /* The slider */
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: black;
-    -webkit-transition: .4s;
-    transition: .4s;
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: black;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
 }
 
-input:checked+.slider {
-    background-color: yellow;
+input:checked + .slider {
+	background-color: yellow;
 }
 
-input:focus+.slider {
-    box-shadow: 0 0 1px yellow;
+input:focus + .slider {
+	box-shadow: 0 0 1px yellow;
 }
 
-input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
 }
 
 @media screen and (max-width: 1536px) {
-    h1 {
-        font-size: 2.5rem;
-        line-height: 3rem;
-    }
+	h1 {
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
 }
 
 @media screen and (max-width: 1280px) {
-    h1 {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
+	h1 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
 }
 
 @media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
+	h1 {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
 }
-
 
 @media screen and (max-width: 768px) {
-    h3 {
-        font-size: 0.675rem;
-        line-height: 1rem;
-    }
-    .popup {
-        width: 90%;
-        font-size: 0.5rem;
-        line-height: 0.7rem;
-        padding: 1rem 0.5rem 1rem 0.5rem;
-    }
-    button {
-        font-size: 0.5rem;
-        border-width: medium;
-    }
-    button:hover {
-        border-width: medium;
-    }
-    h1 {
-        font-size: 1.5rem;
-        line-height: 1.875rem;
-    }
-    html {
-        font-size: 1.5rem;
-    }
+	h3 {
+		font-size: 0.675rem;
+		line-height: 1rem;
+	}
+	.popup {
+		width: 90%;
+		font-size: 0.5rem;
+		line-height: 0.7rem;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+	}
+	button {
+		font-size: 0.5rem;
+		border-width: medium;
+	}
+	button:hover {
+		border-width: medium;
+	}
+	h1 {
+		font-size: 1.5rem;
+		line-height: 1.875rem;
+	}
+	html {
+		font-size: 1.5rem;
+	}
 }
-
 
 @media screen and (max-width: 536px) {
-    h1 {
-        font-size: 1.25rem;
-        line-height: 1.625rem;
-    }
-    h3 {
-        font-size: 0.5rem;
-        line-height: 0.875rem;
-    }
-    .popup {
-        width: 90%;
-        font-size: 0.375rem;
-        line-height: 0.6rem;
-        padding: 1rem 0.5rem 1rem 0.5rem;
-    }
-    button {
-        font-size: 0.375rem;
-    }
-
+	h1 {
+		font-size: 1.25rem;
+		line-height: 1.625rem;
+	}
+	h3 {
+		font-size: 0.5rem;
+		line-height: 0.875rem;
+	}
+	.popup {
+		width: 90%;
+		font-size: 0.375rem;
+		line-height: 0.6rem;
+		padding: 1rem 0.5rem 1rem 0.5rem;
+	}
+	button {
+		font-size: 0.375rem;
+	}
 }
-

@@ -5,7 +5,7 @@
 
 	function setPatternInfo() {
 		infoTitle.set('Sichtbar, aber versteckt');
-		infoText.set('Ich habe die richtige Option sichtbar, aber gut versteckt platziert.');
+		infoText.set('Hehe. Ich habe die richtige Option sichtbar, aber gut versteckt platziert.');
 	}
 </script>
 

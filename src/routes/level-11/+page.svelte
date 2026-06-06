@@ -178,7 +178,7 @@
 	<div class=" flex flex-col items-center">
 		<h3 class="text-center text-2xl font-bold">Fast geschafft!</h3>
 
-		<p>Um die Cookies abzulehnen, ziehe die blaue Box einfach an das andere Ende. Ganz einfach.</p>
+		<p>Um die Cookies abzulehnen, ziehe die blaue Box an das andere Ende. Ganz einfach.</p>
 
 		<div
 			bind:this={gameContainer}

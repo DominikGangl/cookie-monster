@@ -11,7 +11,7 @@
 
 <Header />
 <div class="popup center_popup">
-	<h3 style="line-height: 1.3em;">Fast geschafft!</h3>
+	<h3 style="line-height: 1.3em;">Einfach klicken!</h3>
 	<p>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->

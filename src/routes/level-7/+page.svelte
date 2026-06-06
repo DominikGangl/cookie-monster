@@ -42,6 +42,7 @@
 		class="mx-auto mt-6 mb-2 grid w-11/12 grid-cols-4 justify-items-center gap-y-0.5 sm:w-4/5 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:w-[70%] 2xl:grid-cols-10"
 	>
 		{#each Array(number_of_boxes) as _, i}
+			<!-- to make the blue box more visible, change the first hex code to #0776a6 or even #066893 for very visible -->
 			<button
 				class="box h-5 w-4 border-4 border-white hover:border-yellow-300"
 				style="background-color: {i === specialIndex ? '#0782b6' : '#0b97cb'}"

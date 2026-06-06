@@ -4,8 +4,10 @@
 	import { loseCookieAndGoTo, infoTitle, infoText } from '$lib/scripts/game';
 
 	function setPatternInfo() {
-		infoTitle.set('TODO: Level 9 Info Title');
-		infoText.set('TODO: Level 9 Info Text');
+		infoTitle.set('Versteckter Widerspruch');
+		infoText.set(
+			'HA! Der sichtbare Button lenkt dich bewusst in die falsche Richtung. Lies nochmal genauer.'
+		);
 	}
 </script>
 

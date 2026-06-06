@@ -5,9 +5,9 @@
 	import { infoTitle, infoText } from '$lib/scripts/game';
 
 	function setPatternInfo() {
-		infoTitle.set('Cookies');
+		infoTitle.set('Scheinbare Notwendigkeit');
 		infoText.set(
-			'Um dir das bestmögliche Spielerlebnis zu gewährleisten, wird eine Einwilligung, deine Daten zu speichern und zu verarbeiten, nicht benötigt. Damit ich deine Daten dennoch nutzen kann, benötige ich hierfür deine Zustimmung.'
+			'Die Cookies sind für dieses Spiel gar nicht notwendig. Ich habe den Text nur so gestaltet, damit du verwirrt bist und zustimmst.'
 		);
 	}
 </script>

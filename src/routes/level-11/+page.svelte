@@ -224,7 +224,7 @@
 					width:${BOX_SIZE}px;
 					height:${BOX_SIZE}px;
 					left:${(boxPosition.x / svgWidth) * 100}%;
-					top:${(boxPosition.y / svgHeight) * 100}%;
+					top:${(boxPosition.y / svgHeight) * 103.5}%;
 				`}
 				on:pointerdown={handlePointerDown}
 			></div>
